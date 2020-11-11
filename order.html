@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <section id="overlay">
+      <img src="burger-logo.png" alt="Delicious Burger" id="logo">
+      <hr>
+
+      <form action="submit.html" method="POSTED">
+        <h1>Create a burger!</h1>
+   
+        <div>
+          <label for="protein">What type of protein would you like?</label>
+          <br>
+          <input type="text" id="protein"   placeholder="A-Z or a-z only" required>
+        </div>
+        <hr>
+        <div>
+          <label for="patties">How many patties would you like?</label>
+          <br>
+          <input type="number" min="1" max="5" id="patties" required>
+        </div>
+        <hr>
+        <div>
+          <label for="patty_cook">How do you want your patty cooked?</label> 
+          <br>
+          <span>Rare</span> 
+          <input type="range" id="patty_cook" min="1" max="3" step="1" value="2" >
+          <span>Well-Done</span>
+        </div>
+        <hr>
+         
+        <div>
+           <label for="topping">What toppings  would you like?</label>
+             <br>
+           <input type="checkbox" id="lettuce"  >
+           <label for="lettuce">Lettuce</label>
+
+           <input type="checkbox" id="tomato" >
+           <label for="tomato" name="checkbox">Tomato</label>
+
+          <input type="checkbox" id="onion">
+          <label for="onion">Onion</label>
+        </div>
+        <hr>
+
+        <div>
+          <label for="">Would you like to add cheese?</label>
+          <br>
+          <input type="radio" id="yes" name="cheese">
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="cheese" >
+          <label for="no">No</label>
+        </div>
+        <hr>
+       
+        <div>
+          <label for="bun">What type of bun would you like?</label>
+          <br>
+          <select name="bun" id="bun">
+            <option value="" >Please Select</option>
+            <option  value="sesame">Sesame</option>
+            <option valuee="garlic">Garlic</option>
+            <option  value="cajun">Cajun</option>
+            <option  value="spicy">Spicy</option>  
+          </select>
+        </div>
+        <hr>
+
+        <div>
+          <label for="sauce">What type of sauce would you like?</label> 
+          <br>
+          <input type="text" list="data_list" id="sauce" name="sauce" required >
+          <datalist id="data_list">
+            <option value="ketchup">Ketchup</option>
+            <option value="mayo">Mayo</option>
+            <option value="beer_cheese">Beer Cheese</option>
+            <option value="ranch">Ranch</option>
+          </datalist> 
+        </div>
+        <hr>
+        <div>
+          <label for="note">Anything else you want to add?</label> 
+          <br>
+         <textarea name="note" id="note" cols="40" rows="5" maxlength="50">No plastic utensils please</textarea>
+        </div>
+        <hr>
+        <div>
+          <input type="submit" id="order" name="order" value="order" > 
+        </div>
+      
+
+      </section>
+  </body>
+</html>
